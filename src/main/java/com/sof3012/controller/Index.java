@@ -17,10 +17,7 @@ public class Index extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        var userService = new UserService(req, resp);
-        List<User> listDefaultInTable = userService.findAll();
-        req.getSession().setAttribute("user", listDefaultInTable);
-        req.getRequestDispatcher("/index.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/index.jsp").forward(req, resp);
     }
 
     @Override

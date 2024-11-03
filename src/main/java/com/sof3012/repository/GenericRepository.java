@@ -163,4 +163,8 @@ public class GenericRepository<T, E> {
             return List.of();
         }
     }
+
+    public List<T> findByTitle(String title) {
+        return List.of();
+    }
 }
