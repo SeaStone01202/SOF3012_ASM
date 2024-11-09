@@ -12,22 +12,40 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "[User]")
 public class User implements Serializable {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    @Column(name = "[fullname]")
-    private String fullname;
+    @Column(nullable = false, length = 50)
+    private String username;
 
+    @Column(nullable = false, length = 50)
     private String password;
 
-    @Column(unique = true)
+    @Column(name = "[fullname]", nullable = false, length = 50)
+    private String fullname;
+
+    @Column(unique = true, nullable = false, length = 50)
     private String email;
 
-    private Boolean admin;
+    @Column(columnDefinition = "BOOLEAN DEFAULT FALSE", nullable = false)
+    private Boolean isAdmin = false;
+
+    @Column(columnDefinition = "BOOLEAN DEFAULT TRUE", nullable = false)
+    private Boolean active = true;
 
     @OneToMany(mappedBy = "user")
-    private List<Favorite> favorites;
+    private List<Video> videos;
+
+    @OneToMany(mappedBy = "user")
+    private List<Event> events;
+
+    public User(String username, String password, String fullname, String email) {
+        this.username = username;
+        this.password = password;
+        this.fullname = fullname;
+        this.email = email;
+    }
 }
