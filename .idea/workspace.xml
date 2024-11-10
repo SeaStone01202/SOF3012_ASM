@@ -10,24 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcc5df6-aa20-449e-828e-93b3d2e01e10" name="Changes" comment="Issue #2: third commit fix directory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/ConstantEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/GenericInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/EventRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/GenericService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Favorite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Share.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/FavoriteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/EventRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/GenericRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/InterfaceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/VideoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/GenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/InterfaceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/VideoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/VideoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +231,9 @@
       <workItem from="1731026681320" duration="5327000" />
       <workItem from="1731076224070" duration="2702000" />
       <workItem from="1731080294333" duration="790000" />
-      <workItem from="1731169071025" duration="1094000" />
+      <workItem from="1731169071025" duration="5643000" />
+      <workItem from="1731219272534" duration="682000" />
+      <workItem from="1731228726781" duration="2084000" />
     </task>
     <task id="LOCAL-00001" summary="Issue #2: third commit fix directory">
       <option name="closed" value="true" />

@@ -22,9 +22,9 @@ public class Event implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private ConstantEvent eventName;
+    private ConstantEvent type;
 
-    @Column(nullable = true, length = 100)
+    @Column(length = 100)
     private String details;
 
     @Temporal(TemporalType.DATE)
@@ -46,8 +46,8 @@ public class Event implements Serializable {
         this.date = Date.valueOf(LocalDate.now());
     }
 
-    public Event(ConstantEvent eventName, String details, User user, Video video) {
-        this.eventName = eventName;
+    public Event(ConstantEvent eventType, String details, User user, Video video) {
+        this.type = eventType;
         this.details = details;
         this.user = user;
         this.video = video;

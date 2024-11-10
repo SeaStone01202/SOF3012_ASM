@@ -10,8 +10,11 @@ public class GenericRepositoryImpl<T, E> {
 
     private final EntityManager em;
 
-    public GenericRepositoryImpl(EntityManager em) {
+    private final Class<T> entityClass;
+
+    public GenericRepositoryImpl(EntityManager em, Class<T> entityClass) {
         this.em = em;
+        this.entityClass = entityClass;
     }
 
     public T create(T entity) {
@@ -56,18 +59,18 @@ public class GenericRepositoryImpl<T, E> {
         }
     }
 
-    public T findById(Class<T> entityClass, E idEntity) {
+    public T findById(E idEntity) {
         return em.find(entityClass, idEntity);
     }
 
-    public List<T> findAll(Class<T> entityClass, boolean existIsActive) {
+    public List<T> findAll(boolean existIsActive) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e").append(String.valueOf(existIsActive));
         TypedQuery<T> query = em.createQuery(sql.toString(), entityClass);
         return query.getResultList();
     }
 
-    public List<T> findAll(Class<T> entityClass, boolean existIsActive, int pageNumber, int pageSize) {
+    public List<T> findAll(boolean existIsActive, int pageNumber, int pageSize) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e").append(String.valueOf(existIsActive));
         TypedQuery<T> query = em.createQuery(sql.toString(), entityClass);
@@ -76,7 +79,7 @@ public class GenericRepositoryImpl<T, E> {
         return query.getResultList();
     }
 
-    public T findOne(Class<T> entityClass, String sql, Object... params) {
+    public T findOne(String sql, Object... params) {
         TypedQuery<T> query = em.createQuery(sql, entityClass);
         for (int i = 0; i < params.length; i++) {
             query.setParameter(i + 1, params[i]);
@@ -88,7 +91,7 @@ public class GenericRepositoryImpl<T, E> {
         return resultList.getFirst();
     }
 
-    public List<T> findMany(Class<T> entityClass, String sql, Object... params) {
+    public List<T> findMany(String sql, Object... params) {
         TypedQuery<T> query = em.createQuery(sql, entityClass);
         for (int i = 0; i < params.length; i++) {
             query.setParameter(i + 1, params[i]);
@@ -97,7 +100,7 @@ public class GenericRepositoryImpl<T, E> {
     }
 
     @SuppressWarnings("unchecked")
-    public List<Object[]> findManyByNativeQury(Class<T> entityClass, String sql, Object... params) {
+    public List<Object[]> findManyByNativeQury(String sql, Object... params) {
         Query query = em.createNativeQuery(sql, entityClass);
         for (int i = 0; i < params.length; i++) {
             query.setParameter(i + 1, params[i]);

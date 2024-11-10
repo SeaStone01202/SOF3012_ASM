@@ -6,5 +6,5 @@ public interface VideoRepository extends GenericRepository<Video, Integer> {
 
     Video findByTitle(String title);
 
-
+    Video findByLink(String link);
 }

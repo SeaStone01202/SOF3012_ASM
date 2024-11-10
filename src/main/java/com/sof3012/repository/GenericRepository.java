@@ -10,9 +10,9 @@ public interface GenericRepository<T, E> {
 
     T delete(T entity);
 
-    T findById(Class<T> entityClass, E idEntity);
+    T findById(E idEntity);
 
-    List<T> findAll();
+    List<T> findAll(boolean existIsActive);
 
-    List<T> findAll(int pageNumber, int pageSize);
+    List<T> findAll(boolean existIsActive, int pageNumber, int pageSize);
 }
