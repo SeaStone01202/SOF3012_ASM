@@ -61,6 +61,9 @@
     </style>
 </head>
 <body>
+<%--footer--%>
+<jsp:include page="/views/include/header.jsp"/>
+
 <!-- Form Quên mật khẩu -->
 <div class="form-container">
     <h2 class="text-center text-danger mb-4">Quên mật khẩu</h2>
@@ -74,5 +77,8 @@
             nhập</a></p>
     </form>
 </div>
+
+<%--footer--%>
+<jsp:include page="/views/include/footer.jsp"/>
 </body>
 </html>

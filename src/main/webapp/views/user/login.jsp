@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Login</title>
@@ -71,20 +71,24 @@
     <form action="${pageContext.request.contextPath}/login" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Nhập user hoặc email của bạn" required>
+            <input type="text" class="form-control" id="username" name="username"
+                   placeholder="Nhập user hoặc email của bạn" required>
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Mật khẩu</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu"
+                   required>
         </div>
         <button type="submit" class="btn btn-danger w-100">Đăng nhập</button>
         <div class="row">
             <div class="col">
-                <p class="mt-3 text-center"><a href="${pageContext.request.contextPath}/views/user/forgot_password.jsp" class="text-decoration-none text-danger">Quên
+                <p class="mt-3 text-center"><a href="${pageContext.request.contextPath}/views/user/forgot_password.jsp"
+                                               class="text-decoration-none text-danger">Quên
                     mật khẩu?</a></p>
             </div>
             <div class="col">
-                <p class="mt-3 text-center"><a href="${pageContext.request.contextPath}/views/user/register.jsp" class="text-decoration-none text-danger">Chưa có tài
+                <p class="mt-3 text-center"><a href="${pageContext.request.contextPath}/views/user/register.jsp"
+                                               class="text-decoration-none text-danger">Chưa có tài
                     khoản ?</a></p>
             </div>
         </div>

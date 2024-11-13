@@ -71,8 +71,8 @@
                     <ul class="dropdown-menu">
                         <c:choose>
                             <c:when test="${not empty sessionScope.currentUser}">
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/views/user/change_password.jsp">Thay đổi mật khẩu</a></li>
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/views/user/edit_profile.jsp">Cập nhật thông tin</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

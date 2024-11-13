@@ -61,6 +61,9 @@
     </style>
 </head>
 <body>
+<%--footer--%>
+<jsp:include page="/views/include/header.jsp"/>
+
 <!-- Form Chỉnh sửa thông tin cá nhân -->
 <div class="form-container">
     <h2 class="text-center text-danger mb-4">Chỉnh sửa thông tin cá nhân</h2>
@@ -84,5 +87,8 @@
         <button type="submit" class="btn btn-danger w-100">Lưu thay đổi</button>
     </form>
 </div>
+
+<%--footer--%>
+<jsp:include page="/views/include/footer.jsp"/>
 </body>
 </html>

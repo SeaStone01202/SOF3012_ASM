@@ -61,28 +61,52 @@
     </style>
 </head>
 <body>
+<%--header--%>
+<jsp:include page="/views/include/header.jsp"/>
+
 <div class="form-container">
+    <div id="liveAlertPlaceholder"></div>
     <h2 class="text-center text-danger mb-4">Thay đổi mật khẩu</h2>
-    <form>
-        <div class="mb-3">
-            <label for="username" class="form-label">Tên đăng nhập</label>
-            <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
-        </div>
+    <form action="${pageContext.request.contextPath}/change_password" method="POST">
         <div class="mb-3">
             <label for="old-password" class="form-label">Mật khẩu cũ</label>
-            <input type="password" class="form-control" id="old-password" placeholder="Nhập mật khẩu cũ" required>
+            <input type="password" class="form-control" id="old-password" name="oldPassword"
+                   placeholder="Nhập mật khẩu cũ" required>
         </div>
         <div class="mb-3">
             <label for="new-password" class="form-label">Mật khẩu mới</label>
-            <input type="password" class="form-control" id="new-password" placeholder="Nhập mật khẩu mới" required>
+            <input type="password" class="form-control" id="new-password" name="newPassword"
+                   placeholder="Nhập mật khẩu mới" required>
         </div>
-        <div class="mb-3">
-            <label for="confirm-password" class="form-label">Nhập lại mật khẩu mới</label>
-            <input type="password" class="form-control" id="confirm-password" placeholder="Nhập lại mật khẩu mới" required>
-        </div>
-        <button type="submit" class="btn btn-danger w-100">Xác nhận</button>
+        <button type="submit" class="btn btn-danger w-100" id="liveAlertBtn">Xác nhận</button>
     </form>
 </div>
+
+<%--footer--%>
+<jsp:include page="/views/include/footer.jsp"/>
+
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible text-light" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('Nice, you triggered this alert message!', 'success')
+        })
+    }
+</script>
+
 
 </body>
 </html>

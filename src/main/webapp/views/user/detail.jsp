@@ -17,6 +17,9 @@
     <script src="https://kit.fontawesome.com/9e21e74715.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<%--footer--%>
+<jsp:include page="/views/include/header.jsp"/>
+
 <div class="bg-dark">
     <!-- Video Content -->
     <div class="container my-4 ">
@@ -51,7 +54,8 @@
                             <div class="modal-dialog">
                                 <div class="modal-content bg-dark">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Chia sẻ video đến mọi người</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Chia sẻ video đến mọi
+                                            người</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                     </div>
@@ -59,11 +63,15 @@
                                         <div class="modal-body">
                                             <div class="mb-3">
                                                 <!-- <label for="friendEmail" class="form-label">Your Friend's Email</label> -->
-                                                <input type="email" class="form-control" id="friendEmail" name="friendEmail" placeholder="Nhập email người muốn gửi đến" required>
+                                                <input type="email" class="form-control" id="friendEmail"
+                                                       name="friendEmail" placeholder="Nhập email người muốn gửi đến"
+                                                       required>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                Đóng
+                                            </button>
                                             <button type="submit" class="btn btn-primary">Gửi</button>
                                         </div>
                                     </form>
@@ -147,6 +155,9 @@
             <div class="col-lg-4"></div>
         </div>
     </div>
+
+    <%--footer--%>
+    <jsp:include page="/views/include/footer.jsp"/>
 </div>
 </body>
 </html>

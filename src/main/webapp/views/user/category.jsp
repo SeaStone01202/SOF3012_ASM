@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="views/assets/css/style.css">
 </head>
 <body>
+<%--footer--%>
+<jsp:include page="/views/include/header.jsp"/>
+
 <div class="row bg-dark bg-opacity-90">
 
     <div class="row mt-5">
@@ -231,5 +234,8 @@
         </div>
     </div>
 </div>
+
+<%--footer--%>
+<jsp:include page="/views/include/footer.jsp"/>
 </body>
 </html>

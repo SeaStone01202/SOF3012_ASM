@@ -1,6 +1,7 @@
 package com.sof3012.controller;
 
 import com.sof3012.constant.SessionAttri;
+import com.sof3012.constant.Notice.SessionNotice;
 import com.sof3012.entity.User;
 import com.sof3012.service.UserService;
 import com.sof3012.service.impl.UserServiceImpl;
@@ -31,6 +32,9 @@ public class UserController extends HttpServlet {
             case "/logout":
                 doGetLogout(session, req, resp);
                 break;
+            case "/change_password":
+                doGetChangePassword(req, resp);
+                break;
         }
     }
 
@@ -42,12 +46,27 @@ public class UserController extends HttpServlet {
             case "/login":
                 doPostLogin(session, req, resp);
                 break;
-
+            case "/change_password":
+                doPostChangePassword(session, req, resp);
+                break;
         }
     }
 
     private void doGetLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/views/user/login.jsp").forward(req, resp);
+    }
+
+    private void doGetChangePassword(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/views/user/change_password.jsp").forward(req, resp);
+    }
+
+    private void doGetLogout(HttpSession session, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (session.getAttribute(SessionAttri.CURRENT_USER) != null) {
+            session.removeAttribute(SessionAttri.CURRENT_USER);
+            resp.sendRedirect(req.getContextPath() + "/index");
+        } else {
+            resp.sendRedirect(req.getContextPath() + "/login");
+        }
     }
 
     private void doPostLogin(HttpSession session, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -56,18 +75,40 @@ public class UserController extends HttpServlet {
         User user = userService.login(username, password);
         if (user != null) {
             session.setAttribute(SessionAttri.CURRENT_USER, user);
-            resp.sendRedirect( req.getContextPath()+ "/index");
+            resp.sendRedirect(req.getContextPath() + "/index");
         } else {
-            resp.sendRedirect(req.getContextPath()+ "/login");
+            resp.sendRedirect(req.getContextPath() + "/login");
         }
     }
 
-    private void doGetLogout(HttpSession session, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(session.getAttribute(SessionAttri.CURRENT_USER) != null) {
-            session.removeAttribute(SessionAttri.CURRENT_USER);
-            resp.sendRedirect(req.getContextPath()+ "/index");
+    private void doPostChangePassword(HttpSession session, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User userCurrent = (User) req.getSession().getAttribute(SessionAttri.CURRENT_USER);
+        String oldPassword = req.getParameter("oldPassword");
+        String newPassword = req.getParameter("newPassword");
+
+        if (userCurrent == null) {
+            req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Lỗi tồn tại ! Không có User");
+            resp.sendRedirect(req.getContextPath() + "/login");
         } else {
-            resp.sendRedirect(req.getContextPath()+ "/login");
+            if (!userCurrent.getPassword().equals(oldPassword)) {
+                req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Sai mật khẩu cũ !");
+                resp.sendRedirect(req.getContextPath() + "/login");
+            } else {
+                if (userCurrent.getPassword().equals(newPassword)) {
+                    req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Trùng mật khẩu cũ !");
+                    resp.sendRedirect(req.getContextPath() + "/login");
+                } else {
+                    userCurrent.setPassword(newPassword);
+                    userService.update(userCurrent);
+                    req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Thay đổi mật khẩu thành công");
+                    req.getSession().setAttribute(SessionNotice.MESSAGE_TYPE_SUCCESS, null);
+                    req.setAttribute("delayReload", true);
+                    req.getRequestDispatcher("/views/user/change_password.jsp").forward(req, resp);
+                }
+            }
+
         }
     }
+
+
 }

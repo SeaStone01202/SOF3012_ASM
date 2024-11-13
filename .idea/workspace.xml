@@ -10,99 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcc5df6-aa20-449e-828e-93b3d2e01e10" name="Changes" comment="Issue #2: third commit fix directory">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionAttri.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/assets/css/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/category.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/edit_profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/forgot_password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/Notice/SessionNotice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/error/403.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/error/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/error/500.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionAttri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionAttri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/EventRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/EventRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/GenericService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/about.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/blog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/forgotPassword.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/services.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/css/videoDetail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/OpenSans-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/assets/img/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/forgotPassword.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/center.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/videoDetail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/watchingVideo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/edit_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/edit_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/forgot_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/forgot_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,10 +94,10 @@
     "Maven.SOF3012_ASM [clean,install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.30.executor": "Debug",
+    "Tomcat Server.Tomcat 10.1.30.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Workspace/Vscode/vegetable-shopping-fe-main/vegetable-shopping-fe-main",
+    "last_opened_file_path": "E:/FPL/kì 4/Java4/SOF3012_ASM/src/main/webapp/views/error",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -188,6 +113,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\webapp\views\error" />
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\java" />
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\resources" />
     </key>
@@ -334,6 +260,7 @@
       <workItem from="1731426607581" duration="928000" />
       <workItem from="1731458042017" duration="5228000" />
       <workItem from="1731482288685" duration="7827000" />
+      <workItem from="1731501913312" duration="4212000" />
     </task>
     <task id="LOCAL-00001" summary="Issue #2: third commit fix directory">
       <option name="closed" value="true" />
@@ -360,12 +287,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java</url>
-          <line>23</line>
-          <properties class="com.sof3012.controller.UserController" method="doGet">
+          <line>83</line>
+          <properties class="com.sof3012.controller.UserController" method="doPostChangePassword">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
