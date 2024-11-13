@@ -28,9 +28,9 @@ public class Event implements Serializable {
     private String details;
 
     @Temporal(TemporalType.DATE)
-    private Date date;
+    private LocalDate date;
 
-    @Column(columnDefinition = "BOOLEAN DEFAULT TRUE", nullable = false)
+    @Column(columnDefinition = "BIT DEFAULT 1", nullable = false)
     private Boolean active = true;
 
     @ManyToOne
@@ -43,7 +43,7 @@ public class Event implements Serializable {
 
     @PrePersist
     protected void onCreate() {
-        this.date = Date.valueOf(LocalDate.now());
+        this.date = LocalDate.now();
     }
 
     public Event(ConstantEvent eventType, String details, User user, Video video) {

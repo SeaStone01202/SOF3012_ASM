@@ -88,7 +88,7 @@ public class GenericRepositoryImpl<T, E> {
         if (resultList.isEmpty()) {
             return null;
         }
-        return resultList.getFirst();
+        return resultList.get(0);
     }
 
     public List<T> findMany(String sql, Object... params) {

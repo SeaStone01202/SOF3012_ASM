@@ -14,8 +14,9 @@ public class EventRepositoryImpl extends GenericRepositoryImpl<Event, Integer> i
 
     @Override
     public List<Event> findByEventType(String eventType, String username) {
-        String sql = "SELECT e FROM Event e WHERE e.user.username:username AND e.video.active = 1 e.type = :type"
-                 + " ORDER BY e.date DESC";
+        String sql = "SELECT e FROM Event e WHERE e.user.username = ?2 AND e.video.active = 1 AND e.type = ?1"
+                + " ORDER BY e.date DESC";
         return super.findMany(sql, eventType, username);
     }
+
 }

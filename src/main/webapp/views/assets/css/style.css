@@ -1,0 +1,31 @@
+.card {
+    position: relative;
+    /* Đảm bảo các phần tử con có thể sử dụng position absolute */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Đảm bảo hình ảnh chiếm toàn bộ không gian */
+}
+
+.play-icon {
+    display: none;
+    /* Biểu tượng play mặc định ẩn */
+    position: absolute;
+    /* Đặt vị trí của icon */
+    top: 50%;
+    /* Đặt biểu tượng vào vị trí giữa chiều cao của ảnh */
+    left: 50%;
+    /* Đặt biểu tượng vào vị trí giữa chiều rộng của ảnh */
+    transform: translate(-50%, -50%);
+    /* Căn giữa icon ở cả 2 chiều */
+    z-index: 1;
+    /* Đảm bảo icon play luôn ở trên ảnh */
+}
+
+.card:hover .play-icon {
+    display: block;
+    /* Hiển thị biểu tượng play khi hover vào card */
+}

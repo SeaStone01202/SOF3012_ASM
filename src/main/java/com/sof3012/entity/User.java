@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity
+@Table(name = "[User]")
 public class User implements Serializable {
 
     @Id
@@ -24,16 +25,16 @@ public class User implements Serializable {
     @Column(nullable = false, length = 50)
     private String password;
 
-    @Column(name = "[fullname]", length = 50)
+    @Column(name = "[fullname]", nullable = true, columnDefinition = "NVARCHAR(50)")
     private String fullname;
 
     @Column(unique = true, nullable = false, length = 50)
     private String email;
 
-    @Column(columnDefinition = "BOOLEAN DEFAULT FALSE", nullable = false)
+    @Column(columnDefinition = "BIT DEFAULT 0", nullable = false)
     private Boolean isAdmin = false;
 
-    @Column(columnDefinition = "BOOLEAN DEFAULT TRUE", nullable = false)
+    @Column(columnDefinition = "BIT DEFAULT 1", nullable = false)
     private Boolean active = true;
 
     @OneToMany(mappedBy = "user")

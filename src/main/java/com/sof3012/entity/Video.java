@@ -38,16 +38,16 @@ public class Video implements Serializable {
     @Column(nullable = false, columnDefinition = "int default 0")
     private Integer dislikes = 0;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String link;
 
     @Column(nullable = false)
     private String category;
 
     @Temporal(TemporalType.DATE)
-    private Date date;
+    private LocalDate date;
 
-    @Column(columnDefinition = "BOOLEAN DEFAULT TRUE", nullable = false)
+    @Column(columnDefinition = "BIT DEFAULT 1", nullable = false)
     private Boolean active = true;
 
     @ManyToOne
@@ -59,7 +59,7 @@ public class Video implements Serializable {
 
     @PrePersist
     protected void onCreate() {
-        this.date = Date.valueOf(LocalDate.now());
+        this.date = LocalDate.now();
     }
 
     public Video(String title, String description, String poster, String link, String category, User user) {

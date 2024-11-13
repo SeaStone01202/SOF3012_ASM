@@ -4,6 +4,11 @@ import com.sof3012.entity.User;
 
 public interface UserRepository extends GenericRepository<User, Integer> {
 
-    User findByUsernameAndEmailAndPassword(String username, String email, String password);
+    User findByUsernameOrEmailAndPassword(String username, String email, String password);
+
+    User findByUsername(String username);
+
+    User findByEmail(String email);
+
 
 }
