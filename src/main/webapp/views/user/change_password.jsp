@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Change Password</title>
@@ -15,6 +16,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9e21e74715.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             background-color: #222;
@@ -85,28 +87,20 @@
 <%--footer--%>
 <jsp:include page="/views/include/footer.jsp"/>
 
-<script>
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-    const appendAlert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-            `<div class="alert alert-${type} alert-dismissible text-light" role="alert">`,
-            `   <div>${message}</div>`,
-            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-            '</div>'
-        ].join('')
-
-        alertPlaceholder.append(wrapper)
-    }
-
-    const alertTrigger = document.getElementById('liveAlertBtn')
-    if (alertTrigger) {
-        alertTrigger.addEventListener('click', () => {
-            appendAlert('Nice, you triggered this alert message!', 'success')
-        })
-    }
-</script>
-
+<h5>
+    <c:if test="${not empty sessionScope.message}">
+        <script>
+            Swal.fire({
+                icon: '${type}',
+                title: '${type}',
+                text: '${sessionScope.message}',
+                showConfirmButton: false,
+                timer: 1000
+            });
+            <c:remove var="message" scope="session" />
+        </script>
+    </c:if>
+</h5>
 
 </body>
 </html>

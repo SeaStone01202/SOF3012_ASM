@@ -1,7 +1,7 @@
 package com.sof3012.controller;
 
 import com.sof3012.constant.SessionAttri;
-import com.sof3012.constant.Notice.SessionNotice;
+import com.sof3012.constant.SessionNotice;
 import com.sof3012.entity.User;
 import com.sof3012.service.UserService;
 import com.sof3012.service.impl.UserServiceImpl;
@@ -82,33 +82,44 @@ public class UserController extends HttpServlet {
     }
 
     private void doPostChangePassword(HttpSession session, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User userCurrent = (User) req.getSession().getAttribute(SessionAttri.CURRENT_USER);
+
         String oldPassword = req.getParameter("oldPassword");
+
         String newPassword = req.getParameter("newPassword");
 
-        if (userCurrent == null) {
-            req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Lỗi tồn tại ! Không có User");
-            resp.sendRedirect(req.getContextPath() + "/login");
-        } else {
-            if (!userCurrent.getPassword().equals(oldPassword)) {
-                req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Sai mật khẩu cũ !");
-                resp.sendRedirect(req.getContextPath() + "/login");
-            } else {
-                if (userCurrent.getPassword().equals(newPassword)) {
-                    req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Trùng mật khẩu cũ !");
-                    resp.sendRedirect(req.getContextPath() + "/login");
-                } else {
-                    userCurrent.setPassword(newPassword);
-                    userService.update(userCurrent);
-                    req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, "Thay đổi mật khẩu thành công");
-                    req.getSession().setAttribute(SessionNotice.MESSAGE_TYPE_SUCCESS, null);
-                    req.setAttribute("delayReload", true);
-                    req.getRequestDispatcher("/views/user/change_password.jsp").forward(req, resp);
-                }
-            }
+        String setStyleNotice = SessionNotice.MESSAGE_TYPE_SUCCESS;
 
+        String setValueNotice = "Thay đổi mật khẩu thành công";
+
+        if(oldPassword.trim().isEmpty() || newPassword.trim().isEmpty()) {
+            setStyleNotice = SessionNotice.MESSAGE_TYPE_ERROR;
+            setValueNotice = "Chưa nhập đủ thông tin";
+            return;
         }
+
+        User userCurrent = (User) req.getSession().getAttribute(SessionAttri.CURRENT_USER);
+
+        if (userCurrent == null) {
+            setStyleNotice = SessionNotice.MESSAGE_TYPE_ERROR;
+            setValueNotice = "Lỗi tồn tại ! Không có User";
+            return;
+        }
+
+        if(!userCurrent.getPassword().equals(oldPassword)) {
+            setStyleNotice = SessionNotice.MESSAGE_TYPE_ERROR;
+            setValueNotice = "Sai mật khẩu cũ !";
+            return;
+        }
+
+        if(userCurrent.getPassword().equals(newPassword)) {
+            setStyleNotice = SessionNotice.MESSAGE_TYPE_ERROR;
+            setValueNotice = "Trùng mật khẩu cũ !";
+            return;
+        }
+
+        req.getSession().setAttribute(SessionNotice.MESSAGE_TYPE, setStyleNotice);
+        req.getSession().setAttribute(SessionNotice.MESSAGE_NOTICE, setValueNotice);
+        req.getRequestDispatcher("/views/user/change_password.jsp").forward(req, resp);
+
     }
-
-
 }

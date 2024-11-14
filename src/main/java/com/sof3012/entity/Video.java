@@ -20,10 +20,10 @@ public class Video implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50, columnDefinition = "NVARCHAR(50)")
     private String title;
 
-    @Column(nullable = false, length = 200)
+    @Column(nullable = false, columnDefinition = "NVARCHAR(200)")
     private String description;
 
     @Column(nullable = false)
@@ -41,7 +41,7 @@ public class Video implements Serializable {
     @Column(nullable = false, unique = true)
     private String link;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "NVARCHAR(50)")
     private String category;
 
     @Temporal(TemporalType.DATE)
