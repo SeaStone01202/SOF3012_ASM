@@ -20,10 +20,10 @@ public class Video implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50, columnDefinition = "NVARCHAR(50)")
+    @Column(nullable = false, length = 50, columnDefinition = "NVARCHAR(255)")
     private String title;
 
-    @Column(nullable = false, columnDefinition = "NVARCHAR(200)")
+    @Column(nullable = false, columnDefinition = "NVARCHAR(255)")
     private String description;
 
     @Column(nullable = false)

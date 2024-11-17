@@ -10,11 +10,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcc5df6-aa20-449e-828e-93b3d2e01e10" name="Changes" comment="Issue #2: third commit fix directory">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/JwtSessionAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/admin/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/error/ErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserCHangeProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserChangePassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserLogout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/utils/CookieUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/include/message_notice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468/storage_v2/_src_/database/PolyOA.vsrSjg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468/storage_v2/_src_/database/PolyOA.vsrSjg/schema/dbo.sYMBAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/Notice/SessionNotice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionNotice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionAttri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/UserSessionAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionNotice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/MessageNoticeSessionAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/edit_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,28 +104,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.SOF3012_ASM [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.30.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/FPL/kì 4/Java4/SOF3012_ASM/src/main/webapp/views/error&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.SOF3012_ASM [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.30.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/FPL/kì 4/Java4/SOF3012_ASM/src/main/webapp/views/error",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\webapp\views\error" />
@@ -249,6 +277,20 @@
       <workItem from="1731482288685" duration="7827000" />
       <workItem from="1731501913312" duration="7353000" />
       <workItem from="1731512299531" duration="898000" />
+      <workItem from="1731543289251" duration="657000" />
+      <workItem from="1731572023330" duration="620000" />
+      <workItem from="1731575098443" duration="292000" />
+      <workItem from="1731585541275" duration="34000" />
+      <workItem from="1731585602687" duration="157000" />
+      <workItem from="1731587790787" duration="3696000" />
+      <workItem from="1731630843214" duration="1638000" />
+      <workItem from="1731636832107" duration="74000" />
+      <workItem from="1731721929805" duration="651000" />
+      <workItem from="1731732856800" duration="7786000" />
+      <workItem from="1731760665105" duration="5328000" />
+      <workItem from="1731779338630" duration="607000" />
+      <workItem from="1731780087302" duration="1270000" />
+      <workItem from="1731830442130" duration="5769000" />
     </task>
     <task id="LOCAL-00001" summary="Issue #2: third commit fix directory">
       <option name="closed" value="true" />

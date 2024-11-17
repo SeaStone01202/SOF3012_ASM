@@ -60,8 +60,8 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         <c:choose>
-                            <c:when test="${not empty sessionScope.currentUser}">
-                                <span><i class="fa-regular fa-user"></i>Xin chào: ${sessionScope.currentUser.fullname}</span>
+                            <c:when test="${not empty sessionScope.currentUserName}">
+                                <span><i class="fa-regular fa-user"></i>Xin chào: ${sessionScope.currentUserName}</span>
                             </c:when>
                             <c:otherwise>
                                 <span><i class="fa-regular fa-user"></i>Tài khoản</span>
@@ -70,14 +70,26 @@
                     </a>
                     <ul class="dropdown-menu">
                         <c:choose>
-                            <c:when test="${not empty sessionScope.currentUser}">
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Đăng xuất</a></li>
-                            </c:when>
+                                <c:when test="${sessionScope.currentUserRole == 'true' }">
+                                    <li><a class="dropdown-item disabled" href="#">Role: ${sessionScope.currentUserRole == 'true' ? 'Admin' : 'User'}</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/admin">Trang quản lý</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Đăng xuất</a></li>
+                                </c:when>
+
+                                <c:when test="${sessionScope.currentUserRole == 'false' }">
+                                    <li><a class="dropdown-item disabled" href="#">Role: ${sessionScope.currentUserRole == 'false' ? 'User' : 'Admin'}</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Đăng xuất</a></li>
+                                </c:when>
 
                             <c:otherwise>
                                 <li><a class="dropdown-item" href="${pageContext.request.contextPath}/login">Đăng nhập</a></li>
@@ -88,7 +100,6 @@
                                 <li><a class="dropdown-item" href="${pageContext.request.contextPath}/forgot_password">Quên mật khẩu</a></li>
                             </c:otherwise>
                         </c:choose>
-
                     </ul>
                 </li>
             </ul>
@@ -96,4 +107,5 @@
     </div>
 </nav>
 </body>
+
 </html>

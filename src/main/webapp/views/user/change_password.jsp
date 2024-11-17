@@ -88,17 +88,18 @@
 <jsp:include page="/views/include/footer.jsp"/>
 
 <h5>
-    <c:if test="${not empty sessionScope.message}">
+    <c:if test="${not empty message}">
         <script>
             Swal.fire({
                 icon: '${type}',
                 title: '${type}',
-                text: '${sessionScope.message}',
+                text: '${message}',
                 showConfirmButton: false,
                 timer: 1000
             });
-            <c:remove var="message" scope="session" />
         </script>
+        <c:remove var="message" scope="request" />
+        <c:remove var="type" scope="request" />
     </c:if>
 </h5>
 

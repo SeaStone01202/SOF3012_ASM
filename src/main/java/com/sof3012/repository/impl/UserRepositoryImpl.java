@@ -46,7 +46,7 @@ public class UserRepositoryImpl extends GenericRepositoryImpl<User, Integer> imp
 
     @Override
     public User findByUsername(String username) {
-        String sql = "SELECT u FROM User u WHERE u.username = :username";
+        String sql = "SELECT u FROM User u WHERE u.username = ?1";
         return super.findOne(sql, username);
     }
 

@@ -16,6 +16,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9e21e74715.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             background-color: #222;
@@ -93,9 +94,12 @@
             </div>
         </div>
     </form>
-
-    <%--footer--%>
-    <jsp:include page="/views/include/footer.jsp"/>
 </div>
+
+<%--footer--%>
+<jsp:include page="/views/include/footer.jsp"/>
+
+<jsp:include page="/views/include/message_notice.jsp"/>
+
 </body>
 </html>

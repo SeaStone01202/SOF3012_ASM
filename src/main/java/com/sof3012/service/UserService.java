@@ -20,5 +20,7 @@ public interface UserService {
 
     User findByUsername(String username);
 
-    User login(String input, String password);
+    String login(String input, String password);
+
+    String changePassword(String token, String oldPassword, String newPassword);
 }

@@ -1,6 +1,7 @@
 package com.sof3012.constant;
 
-public class SessionNotice {
+public class MessageNoticeSessionAttribute {
+
     public final static String MESSAGE_NOTICE = "message";
 
     public final static String MESSAGE_TYPE = "type";

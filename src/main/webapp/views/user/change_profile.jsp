@@ -67,7 +67,7 @@
 <!-- Form Chỉnh sửa thông tin cá nhân -->
 <div class="form-container">
     <h2 class="text-center text-danger mb-4">Chỉnh sửa thông tin cá nhân</h2>
-    <form>
+    <form action="${pageContext.request.contextPath}/change_password">
         <div class="mb-3">
             <label for="username" class="form-label">Tên đăng nhập</label>
             <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
@@ -78,7 +78,7 @@
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Mật khẩu</label>
-            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+            <input type="password" class="form-control" id="password" placeholder="*****" disabled>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>

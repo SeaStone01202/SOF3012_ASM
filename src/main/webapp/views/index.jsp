@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Home</title>
@@ -16,6 +17,7 @@
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9e21e74715.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -176,5 +178,23 @@
 
 <%--footer--%>
 <jsp:include page="include/footer.jsp"/>
+
+<%--<h5>--%>
+<%--    <c:if test="${not empty message}">--%>
+<%--        <script>--%>
+<%--            Swal.fire({--%>
+<%--                icon: '${type}',--%>
+<%--                title: '${type}',--%>
+<%--                text: '${message}',--%>
+<%--                showConfirmButton: false,--%>
+<%--                timer: 1000--%>
+<%--            });--%>
+<%--        </script>--%>
+<%--        <c:remove var="message" scope="request" />--%>
+<%--        <c:remove var="type" scope="request" />--%>
+<%--    </c:if>--%>
+<%--</h5>--%>
+
+<jsp:include page="/views/include/message_notice.jsp"/>
 </body>
 </html>
