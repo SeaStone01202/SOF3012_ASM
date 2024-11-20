@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <title>Home</title>
@@ -74,127 +75,50 @@
                 </div>
 
                 <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col border border-warning rounded p-2">
-                        <div class="card bg-dark text-light border-0">
-                            <img src="https://via.placeholder.com/270x200.png?text=270+x+200"
-                                 class="card-img-top" alt="Movie Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-danger">Semper</h5>
-                                <p class="card-text">A father travels from Oklahoma to France to help his...</p>
-                                <div class="d-flex align-items-center">
+                    <c:forEach var="videoItem" items="${applicationScope.listAllVideo}" end="3">
+                        <div class="col border border-warning rounded p-2">
+                            <div class="card bg-dark text-light border-0">
+                                <img src="http://img.youtube.com/vi/${videoItem.poster}/maxresdefault.jpg"
+                                     class="card-img-top" alt="Movie Thumbnail">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger">${videoItem.title}</h5>
+                                    <p class="card-text">
+                                        <c:choose>
+                                            <c:when test="${fn:length(videoItem.description) > 50}">
+                                                ${fn:substring(videoItem.description, 0, 50)} ...
+                                            </c:when>
+                                            <c:otherwise>
+                                                ${videoItem.description}
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </p>
+                                    <div class="d-flex align-items-center">
                                             <span class="ps-2"><i
-                                                    class="fa-regular fa-thumbs-up text-warning"></i>200</span>
-                                    <span class="ps-2"><i
-                                            class="fa-regular fa-thumbs-down text-warning"></i>100</span>
-                                    <span class="ps-2"><i class="fa-regular fa-eye text-warning"></i>1
-                                                Views</span>
-                                    <span><i class="fa-solid fa-play"></i></span>
+                                                    class="fa-regular fa-thumbs-up text-warning"></i>${videoItem.likes}</span>
+                                        <span class="ps-2"><i
+                                                class="fa-regular fa-thumbs-down text-warning"></i>${videoItem.dislikes}</span>
+                                        <span class="ps-2"><i
+                                                class="fa-regular fa-eye text-warning"></i>${videoItem.views}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Biểu tượng play ẩn đi mặc định và sẽ hiển thị khi hover vào card -->
-                            <a href="${pageContext.request.contextPath}/views/user/detail.jsp" class="play-icon">
+                                <!-- Biểu tượng play ẩn đi mặc định và sẽ hiển thị khi hover vào card -->
+                                <a href="${pageContext.request.contextPath}/watch?v=${videoItem.link}" class="play-icon">
                                         <span><i class="fa-solid fa-play text-danger"
                                                  style="font-size: 100px;"></i></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col border border-warning rounded p-2">
-                        <div class="card bg-dark text-light border-0">
-                            <img src="https://via.placeholder.com/270x200.png?text=270+x+200"
-                                 class="card-img-top" alt="Movie Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-danger">Dapibus</h5>
-                                <p class="card-text">A father travels from Oklahoma to France to help his...</p>
-                                <div class="d-flex align-items-center">
-                                            <span class="ps-2"><i
-                                                    class="fa-regular fa-thumbs-up text-warning"></i>200</span>
-                                    <span class="ps-2"><i
-                                            class="fa-regular fa-thumbs-down text-warning "></i>100</span>
-                                    <span class="ps-2"><i class="fa-regular fa-eye text-warning "></i>1
-                                                Views</span>
-                                </div>
-                                <a href="#" class="play-icon position-absolute top-50 start-50 translate-middle"
-                                   style="display: none;">
-                                    <span><i class="fa-regular fa-play" style="font-size: 40px;"></i></span>
                                 </a>
                             </div>
-                            <a href="#" class="play-icon">
-                                        <span><i class="fa-solid fa-play text-danger"
-                                                 style="font-size: 100px;"></i></span>
-                            </a>
                         </div>
-                    </div>
-                    <div class="col border border-warning rounded p-2">
-                        <div class="card bg-dark text-light border-0">
-                            <img src="https://via.placeholder.com/270x200.png?text=270+x+200"
-                                 class="card-img-top" alt="Movie Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-danger">Ipsum</h5>
-                                <p class="card-text">A father travels from Oklahoma to France to help his...</p>
-                                <div class="d-flex align-items-center">
-                                            <span class="ps-2"><i
-                                                    class="fa-regular fa-thumbs-up text-warning"></i>200</span>
-                                    <span class="ps-2"><i
-                                            class="fa-regular fa-thumbs-down text-warning "></i>100</span>
-                                    <span class="ps-2"><i class="fa-regular fa-eye text-warning "></i>1
-                                                Views</span>
-                                </div>
-                            </div>
-                            <a href="#" class="play-icon">
-                                        <span><i class="fa-solid fa-play text-danger"
-                                                 style="font-size: 100px;"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col border border-warning rounded p-2">
-                        <div class="card bg-dark text-light border-0">
-                            <img src="https://via.placeholder.com/270x200.png?text=270+x+200"
-                                 class="card-img-top" alt="Movie Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-danger">Lorem</h5>
-                                <p class="card-text">A father travels from Oklahoma to France to help his...</p>
-                                <div class="d-flex align-items-center">
-                                            <span class="ps-2"><i
-                                                    class="fa-regular fa-thumbs-up text-warning"></i>200</span>
-                                    <span class="ps-2"><i
-                                            class="fa-regular fa-thumbs-down text-warning "></i>100</span>
-                                    <span class="ps-2"><i class="fa-regular fa-eye text-warning "></i>1
-                                                Views</span>
-                                </div>
-                            </div>
-                            <a href="#" class="play-icon">
-                                        <span><i class="fa-solid fa-play text-danger"
-                                                 style="font-size: 100px;"></i></span>
-                            </a>
-                        </div>
-                    </div>
+                    </c:forEach>
                 </div>
+                <div class="col-1"></div>
             </div>
-            <div class="col-1"></div>
         </div>
     </div>
 </div>
+    <%--footer--%>
+    <jsp:include page="include/footer.jsp"/>
 
-<%--footer--%>
-<jsp:include page="include/footer.jsp"/>
 
-<%--<h5>--%>
-<%--    <c:if test="${not empty message}">--%>
-<%--        <script>--%>
-<%--            Swal.fire({--%>
-<%--                icon: '${type}',--%>
-<%--                title: '${type}',--%>
-<%--                text: '${message}',--%>
-<%--                showConfirmButton: false,--%>
-<%--                timer: 1000--%>
-<%--            });--%>
-<%--        </script>--%>
-<%--        <c:remove var="message" scope="request" />--%>
-<%--        <c:remove var="type" scope="request" />--%>
-<%--    </c:if>--%>
-<%--</h5>--%>
-
-<jsp:include page="/views/include/message_notice.jsp"/>
+    <jsp:include page="/views/include/message_notice.jsp"/>
 </body>
 </html>

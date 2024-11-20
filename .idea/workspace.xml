@@ -10,39 +10,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcc5df6-aa20-449e-828e-93b3d2e01e10" name="Changes" comment="Issue #2: third commit fix directory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/JwtSessionAttribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/admin/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/error/ErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserCHangeProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserChangePassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserLogout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/utils/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/utils/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/include/message_notice.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/HistoryVideoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/WatchVideoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Share.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/HistoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/HistoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/HistoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/HistoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468/storage_v2/_src_/database/PolyOA.vsrSjg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/faed3c8b-1a8d-4377-8672-4f7906e9c468/storage_v2/_src_/database/PolyOA.vsrSjg/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6/storage_v2/_src_/database/PolyOA.vsrSjg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6/storage_v2/_src_/database/PolyOA.vsrSjg/schema/dbo.sYMBAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionAttri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/UserSessionAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/SessionNotice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/MessageNoticeSessionAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/ConstantEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserCHangeProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserChangeProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/VideoLoadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/EventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/EventRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/VideoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_password.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/edit_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/change_profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +56,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -109,10 +112,10 @@
     "Maven.SOF3012_ASM [clean,install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.30.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.30.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/FPL/kì 4/Java4/SOF3012_ASM/src/main/webapp/views/error",
+    "last_opened_file_path": "E:/FPL/kì 4/Java4/SOF3012_ASM/src/main/webapp/views/user",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,6 +131,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\webapp\views\user" />
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\webapp\views\error" />
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\java" />
       <recent name="E:\FPL\kì 4\Java4\SOF3012_ASM\src\main\resources" />
@@ -290,7 +294,13 @@
       <workItem from="1731760665105" duration="5328000" />
       <workItem from="1731779338630" duration="607000" />
       <workItem from="1731780087302" duration="1270000" />
-      <workItem from="1731830442130" duration="5769000" />
+      <workItem from="1731830442130" duration="6670000" />
+      <workItem from="1731853896578" duration="4469000" />
+      <workItem from="1731890682787" duration="3839000" />
+      <workItem from="1732004214965" duration="3871000" />
+      <workItem from="1732017196025" duration="8829000" />
+      <workItem from="1732062949982" duration="30000" />
+      <workItem from="1732112012940" duration="8966000" />
     </task>
     <task id="LOCAL-00001" summary="Issue #2: third commit fix directory">
       <option name="closed" value="true" />
@@ -311,5 +321,20 @@
     <MESSAGE value="Issue #2: second commit" />
     <MESSAGE value="Issue #2: third commit fix directory" />
     <option name="LAST_COMMIT_MESSAGE" value="Issue #2: third commit fix directory" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java</url>
+          <line>65</line>
+          <properties class="com.sof3012.repository.impl.GenericRepositoryImpl" method="findAll">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

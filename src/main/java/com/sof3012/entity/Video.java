@@ -23,7 +23,7 @@ public class Video implements Serializable {
     @Column(nullable = false, length = 50, columnDefinition = "NVARCHAR(255)")
     private String title;
 
-    @Column(nullable = false, columnDefinition = "NVARCHAR(255)")
+    @Column(nullable = false, columnDefinition = "NVARCHAR(MAX)")
     private String description;
 
     @Column(nullable = false)
@@ -53,9 +53,6 @@ public class Video implements Serializable {
     @ManyToOne
     @JoinColumn(name = "userId")
     private User user;
-
-    @OneToMany(mappedBy = "video")
-    private List<Event> events;
 
     @PrePersist
     protected void onCreate() {

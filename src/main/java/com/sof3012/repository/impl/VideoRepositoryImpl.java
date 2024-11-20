@@ -12,13 +12,13 @@ public class VideoRepositoryImpl extends GenericRepositoryImpl<Video, Integer> i
 
     @Override
     public Video findByTitle(String title) {
-        String sql = "SELECT o FROM Video o WHERE o.title LIKE :title";
+        String sql = "SELECT o FROM Video o WHERE o.title LIKE ?1";
         return super.findOne(sql, "%" + title + "%");
     }
 
     @Override
     public Video findByLink(String link) {
-        String sql = "SELECT o FROM Video o WHERE o.link = :link";
+        String sql = "SELECT o FROM Video o WHERE o.link = ?1";
         return super.findOne(sql, link);
     }
 }

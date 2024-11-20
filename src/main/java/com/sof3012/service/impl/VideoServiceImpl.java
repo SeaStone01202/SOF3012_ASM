@@ -28,7 +28,7 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public Video update(Video video) {
-        return null;
+        return videoRepository.update(video);
     }
 
     @Override
@@ -39,5 +39,10 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public List<Video> getAllVideos() {
         return videoRepository.findAll(true);
+    }
+
+    @Override
+    public Video getVideo(String href) {
+        return videoRepository.findByLink(href);
     }
 }

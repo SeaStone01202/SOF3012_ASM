@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/index"><span><i
+                    <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/home"><span><i
                             class="fa-solid fa-house"></i></span> PHIMHAI</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -45,7 +45,10 @@
                     <a class="nav-link" href="#">Liên hệ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Năm phát hành</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/history">Lịch sử</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/playlist">Danh sách phát</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -75,6 +78,8 @@
                                     <li><a class="dropdown-item" href="${pageContext.request.contextPath}/admin">Trang quản lý</a></li>
                                     <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
                                     <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/history">Lịch sử</a></li>
+
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -85,6 +90,7 @@
                                     <li><a class="dropdown-item disabled" href="#">Role: ${sessionScope.currentUserRole == 'false' ? 'User' : 'Admin'}</a></li>
                                     <li><a class="dropdown-item" href="${pageContext.request.contextPath}/change_password">Thay đổi mật khẩu</a></li>
                                     <li><a class="dropdown-item" href="${pageContext.request.contextPath}/edit_profile">Cập nhật thông tin</a></li>
+                                    <li><a class="dropdown-item" href="${pageContext.request.contextPath}/history">Lịch sử</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

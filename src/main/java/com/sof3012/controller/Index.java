@@ -3,6 +3,7 @@ package com.sof3012.controller;
 import com.sof3012.entity.Video;
 import com.sof3012.service.VideoService;
 import com.sof3012.service.impl.VideoServiceImpl;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,10 +21,18 @@ public class Index extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Video> listAllVideo = videoService.getAllVideos();
+        ServletContext context = getServletContext();
+
+        List<Video> listAllVideo = (List<Video>) context.getAttribute("listAllVideo");
+
+        if (listAllVideo == null) {
+            listAllVideo = videoService.getAllVideos();
+            context.setAttribute("listAllVideo", listAllVideo);
+        }
 
         req.getRequestDispatcher("/views/index.jsp").forward(req, resp);
     }
+
 
 
 }

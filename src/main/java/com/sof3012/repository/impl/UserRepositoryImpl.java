@@ -55,10 +55,4 @@ public class UserRepositoryImpl extends GenericRepositoryImpl<User, Integer> imp
         String sql = "SELECT u FROM User u WHERE u.email = :email";
         return super.findOne(sql, email);
     }
-
-    @Override
-    public User findByPassword(String password) {
-        String sql = "SELECT u FROM User u WHERE u.password = :password";
-        return null;
-    }
 }

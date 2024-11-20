@@ -41,7 +41,7 @@ public class User implements Serializable {
     private List<Video> videos;
 
     @OneToMany(mappedBy = "user")
-    private List<Event> events;
+    private List<Share> shares;
 
     public User(String username, String password, String fullname, String email) {
         this.username = username;

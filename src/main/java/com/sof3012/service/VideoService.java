@@ -13,4 +13,6 @@ public interface VideoService {
     Video delete (String href);
 
     List<Video> getAllVideos();
+
+    Video getVideo (String href);
 }

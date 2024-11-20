@@ -65,14 +65,17 @@ public class GenericRepositoryImpl<T, E> {
 
     public List<T> findAll(boolean existIsActive) {
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e").append(String.valueOf(existIsActive));
+        sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e");
+        if (existIsActive) {
+            sql.append(" WHERE e.active = true");
+        }
         TypedQuery<T> query = em.createQuery(sql.toString(), entityClass);
         return query.getResultList();
     }
 
     public List<T> findAll(boolean existIsActive, int pageNumber, int pageSize) {
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e").append(String.valueOf(existIsActive));
+        sql.append("SELECT e FROM ").append(entityClass.getSimpleName()).append(" e ").append(String.valueOf(existIsActive));
         TypedQuery<T> query = em.createQuery(sql.toString(), entityClass);
         query.setFirstResult((pageNumber - 1) * pageSize);
         query.setMaxResults(pageSize);
