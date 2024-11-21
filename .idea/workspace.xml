@@ -10,42 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcc5df6-aa20-449e-828e-93b3d2e01e10" name="Changes" comment="Issue #2: third commit fix directory">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/HistoryVideoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/WatchVideoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Favorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/History.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Share.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/HistoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/HistoryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/HistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/HistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/user/history.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6/storage_v2/_src_/database/PolyOA.vsrSjg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/69ed7409-ead6-4ef4-bbc2-ded49e7545f6/storage_v2/_src_/database/PolyOA.vsrSjg/schema/dbo.sYMBAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/constant/ConstantEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserCHangeProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/user/UserChangeProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/VideoLoadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/entity/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/EventRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/EventRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/GenericRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/repository/impl/VideoRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/include/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/WatchVideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sof3012/controller/video/WatchVideoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
